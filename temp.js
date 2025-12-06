@@ -1,58 +1,82 @@
-let workHolders =JSON.parse(localStorage.getItem("Work") )||[];
+let quotes = JSON.parse(localStorage.getItem("Quotes")) || [];
 
 // elements
+let saveButton = document.querySelector(".save");
+let quoteInput = document.getElementById("quote-input");
+let nameInput = document.getElementById("name-input");
+let categoryInput = document.getElementById("category-input");
 
-let submit=document.querySelector(".save");
-let input=document.querySelectorAll(".input-box");
-let shown=document.querySelector(".completed");
-let d=document.querySelector(".display");
+let allQuotesContainer = document.querySelector(".all-quotes");
+let searchInput = document.getElementById("search-input");
 
-//functions 
+//functions
 //to save data in local storage
-submit.addEventListener("click",function(){
-  
-  console.log(input.item(0).value);
- workHolders.push(input.item(0).value);
-   input.innerText="";
-     input.item(0).value="";
-  localStorage.setItem("Work",JSON.stringify(workHolders));
- 
-  
-})
-console.log(workHolders);
-//to display data from local storage when click on dane work button
-let flag=true;
-shown.addEventListener("click",function(){
- 
-if(flag==true){
-workHolders.forEach(function(ele){
-    let p=document.createElement("div");
-    p.setAttribute("class","item");
-    let button=document.createElement("button");
-    let k=document.createElement("h1");
-    k.innerText="Task:";
-    p.appendChild(k);
-    button.textContent="Delete";
-    button.setAttribute("class","delete");
-    button.style.background="red";
- 
-    d.appendChild(button);
-    console.log(p);
-    button.addEventListener("click",function(){
-      alert("Are you sure you want to delete this task?");
-      d.removeChild(p);
-      d.removeChild(button);
-      workHolders=workHolders.filter(function(item){
-        return item!==ele;
-      });
-      localStorage.setItem("Work",JSON.stringify(workHolders));
+saveButton.addEventListener("click", function() {
+  let quoteText = quoteInput.value;
+  let authorName = nameInput.value;
+  let quoteCategory = categoryInput.value;
+
+  if (quoteText && authorName && quoteCategory) {
+    let newQuote = {
+      text: quoteText,
+      author: authorName,
+      category: quoteCategory,
+    };
+    quotes.push(newQuote);
+    localStorage.setItem("Quotes", JSON.stringify(quotes));
+
+    quoteInput.value = "";
+    nameInput.value = "";
+    categoryInput.value = "";
+
+    displayQuotes(quotes);
+  }
+});
+
+
+
+function displayQuotes(quotesToDisplay) {
+  allQuotesContainer.innerHTML = "";
+  quotesToDisplay.forEach(function(quote, index) {
+    let quoteItem = document.createElement("div");
+    quoteItem.setAttribute("class", "quote-item");
+
+    let author = document.createElement("div");
+    author.setAttribute("class", "quote-author");
+    author.textContent = `- ${quote.author}`;
+
+    let text = document.createElement("div");
+    text.setAttribute("class", "quote-text");
+    text.textContent = quote.text;
+
+    let deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.setAttribute("class", "delete-quote-btn");
+    deleteButton.addEventListener("click", function() {
+        quotes.splice(index, 1);
+        localStorage.setItem("Quotes", JSON.stringify(quotes));
+        displayQuotes(quotes);
     });
 
-    p.textContent=ele;
-    d.appendChild(p); })
-   flag=false;}else{
-    d.innerHTML="";
-    flag=true;
-   }
-})
-   
+    quoteItem.appendChild(author);
+    quoteItem.appendChild(text);
+    quoteItem.appendChild(deleteButton);
+
+    allQuotesContainer.appendChild(quoteItem);
+  });
+}
+
+// Initial display of quotes if any are in local storage
+displayQuotes(quotes);
+
+searchInput.addEventListener("input", function() {
+    let searchTerm = searchInput.value.toLowerCase();
+    let filteredQuotes = quotes.filter(function(quote) {
+        return (
+            quote.text.toLowerCase().includes(searchTerm) ||
+            quote.author.toLowerCase().includes(searchTerm) ||
+            quote.category.toLowerCase().includes(searchTerm)
+        );
+    });
+    displayQuotes(filteredQuotes);
+});
