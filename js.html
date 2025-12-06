@@ -23,18 +23,28 @@ src = './assets/profile.png'
    <body>
 
     <!-- INPUT BOX ELEMENTS -->
-     <h1>write done  work</h1>
-   <input class="input-box" onfocus="this.value=''">
-</input>
-   <button class="save">Save</button>
+     <h1>Enter a Quote</h1>
+     <input class="input-box" id="name-input" placeholder="Author Name...">
+     <input class="input-box" id="quote-input" placeholder="Enter your quote here...">
+     <input class="input-box" id="category-input" placeholder="Enter quote category...">
+     <button class="save">Add Quote</button>
 
-   <button class="completed" >DONE WORK</button>
+
 
   <!-- DISPLAY privious ELEMENTS -->
-   <ol class="display">
-  
+   <div class="saved-tasks">
+       <ol class="display">
+      
+    
+       </ol>
+   </div>
 
-   </ol>
+   <div class="quote-display-section">
+        <h2>All Quotes</h2>
+        <input class="input-box" id="search-input" placeholder="Search for a quote...">
+        <div class="all-quotes">
+        </div>
+   </div>
    
     <script src="temp.js"></script>
 
