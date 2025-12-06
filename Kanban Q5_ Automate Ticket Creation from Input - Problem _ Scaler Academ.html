@@ -1,0 +1,708 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="author" content="InterviewBit">
+
+  <title>Scaler</title>
+<meta name="description" content="The first job-driven online tech-versity - improve tech skills and land a dream job. An InterviewBit product." />
+<meta property="og:site_name" content="Scaler" />
+<meta property="og:title" content="Scaler: Accelerate your tech career" />
+<meta property="og:description" content="The first job-driven online tech-versity - improve tech skills and land a dream job. An InterviewBit product." />
+<meta property="og:image" content="https://assets-v2.scaler.com/assets/scaler/png/scaler-meta-image-fed27fda894abf1a87190ae638e18c9b8417095d963cf27540c90108824b9ec8.png.gz" />
+<meta property="og:url" content="https://www.scaler.com/academy/mentee-dashboard/class/469991/assignment/problems/84476" />
+<link rel="canonical" href="https://www.scaler.com/academy/mentee-dashboard/class/469991/assignment/problems/84476" />
+
+    <meta name="current-user" data-id="fb5eca22a434" data-slug="fb5eca22a434" />
+
+<meta name="env-name" data-id="scaler" />
+
+    <link rel="icon" type="image/x-icon" href="https://assets-v2.scaler.com/assets/scaler/favicon-b8be73bbdaf99603448b08956392cad1e0f2d4e0c84661b1cfc20225e9fb6a40.ico.gz">
+
+  <meta property="fb:app_id" content="538827363638509" />
+
+  <link rel="stylesheet" media="all" href="https://assets-v2.scaler.com/assets/master/products/scaler/components/dashboard_react-37dcc9267479d4b0e47089e62fc2d2605ad5d26f33450283a36179d473228601.css.gz" />
+
+        <link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/styles.e7002c.css" />
+    <link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/base.906e3d.css" />
+    <link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/vendors~frontend/acad~d8582b14.c652af.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/vendors~frontend/ca~f~0ad8fab1.8c8f21.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/vendors~RichTextEdito~b32d7ae1.4fd391.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/vendors~frontend/alum~319156d0.12e6a5.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/vendors~frontend/hire~d67c2c23.21b631.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/vendors~frontend/ment~c7022893.72d646.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/vendors~frontend/ment~b225c074.806359.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/vendors~frontend/mentee.4194fd.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/academy_admi~e275566d.dbda18.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/docs~fronten~55f4a944.42178c.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/help_request~c7133468.e56673.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/mentee~front~6f586fc7.f87b5f.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/docs~fronten~60139a8c.6c3adf.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/hire_from_sc~c5007cf4.2a4f85.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/mentee~front~fdeb1a77.c7d3fd.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/mentee~index.64d445.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/mentee~front~37662f88.e1667b.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/hire_from_sc~7d089169.3bd388.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/mentee~front~7eabcdb1.758b66.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/mentee~frontend/store.ca25ba.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/crowd_evalua~825adcac.bfc369.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/mentee~front~d387111b.764486.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/mentee~front~2ef5be81.c697d5.css" />
+<link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/mentee.92507d.css" />
+
+
+    <link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/notebook.15b647.css" />
+
+
+    <link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/notification.2a9dc8.css" />
+
+
+    <link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/profile_common.d84050.css" />
+
+
+
+
+
+    <link rel="stylesheet" media="screen" href="https://assets-v2.scaler.com/packs/css/frontend/rich_text_editor.d22aff.css" />
+
+
+
+
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="omh9fR3OTMkKTo4wrYdbxeekGUKLlfdKoplO861AOM2yvyzQBAulU7m+rvlwVYcmUKpyFagdOpi6iNdEB7B7GA==" />
+    <script>
+  var domain = 'scaler.com';
+  if (domain.indexOf('www.') !== 0) {
+    domain = 'www.' + domain;
+  }
+
+  if (0 === document.location.href.indexOf("https://")) {
+    domain = "https://" + domain + "/";
+    if (0 !== document.location.href.indexOf(domain)) {
+      var newLocation = document.location.href.replace(/https:\/\/[^\/]+\//, domain);
+
+      if (newLocation !== document.location.href) {
+        document.location.replace(newLocation);
+      }
+    }
+  } else {
+    domain = "http://" + domain + "/";
+    if (0 != document.location.href.indexOf(domain)) {
+      var newLocation = document.location.href.replace(/http:\/\/[^\/]+\//, domain);
+
+      if(newLocation !== document.location.href) {
+        document.location.replace(newLocation);
+      }
+    }
+  }
+  </script>
+
+  <script>
+  window.ENV_VARS = {
+    mode: "production",
+    application: JSON.parse('{"env_id":"scaler","env_site_name":"Scaler","env_site_nick":"Scaler","env_domain":"scaler.com","env_base_url":"https://www.scaler.com","env_from_mailer":"info@scaler.com","env_reply_to_mailer":"info@scaler.com","env_support_mailer":"","env_hello_mailer":"hello@scaler.com","env_calendar_organiser":"calendar16@scaler.com","env_webpush_manifest":"/gcm-manifest-scaler.json"}'),
+    config: JSON.parse('{"speed_test_enabled":true,"seasonal_theme_mode":"none"}'),
+    request_source: "web"
+  };
+</script>
+
+    <script>
+    const timeout = setTimeout(() => {
+      var _ge = new CustomEvent('initializedGTM', { bubbles: true });
+      document.dispatchEvent(_ge);
+    }, 15000);
+    window.addEventListener('load', function() {
+      var isGTMLoaded = false
+      function loadGTM() {
+
+        if(!isGTMLoaded) {
+
+          isGTMLoaded = true;
+
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+          j.addEventListener('load', function() {
+            var _ge = new CustomEvent('initializedGTM', { bubbles: true });
+            d.dispatchEvent(_ge);
+          });
+          f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer',"GTM-M94JJN9");
+
+          (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+          h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+          (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+          })(window,document.documentElement,'async-hide','dataLayer',4000,
+          {"GTM-M94JJN9":true});
+
+          window.removeEventListener('mousemove',loadGTM);
+          window.removeEventListener('click',loadGTM);
+          window.removeEventListener('scroll',loadGTM);
+          window.removeEventListener('touchstart',loadGTM);
+          window.removeEventListener('bypass_gtm_optimisation', loadGTM);
+          clearTimeout(timeout);
+        }
+      }
+      window.addEventListener('mousemove',loadGTM);
+      window.addEventListener('click',loadGTM);
+      window.addEventListener('scroll',loadGTM);
+      window.addEventListener('touchstart',loadGTM);
+      window.addEventListener('bypass_gtm_optimisation', loadGTM);
+    })
+  </script>
+
+<script>
+  var gtmServerEvents = [];
+
+  var freeMentee = false;
+  window.GTMData = (function () {
+      var userType = "mentee";
+      
+      return {
+        isFreeProductUser: "false",
+        gtmDataLayerVariables: [],
+        company: "scaler".toLowerCase(),
+        isLoggedIn: true,
+        email: "nikhil.25bcs10100@sst.scaler.com",
+        userId: "7504781",
+        region: "india",
+        ugEnrolled: "true",
+        isNewUser: false,
+        cuIsUgStudent: "true",
+        cuTwelfthGradYear: "2024",
+        phoneNumber: "+91-9201545953",
+        whatsappConsent: true,
+        userType,
+        freeMentee: userType && userType.includes('mentee') ? freeMentee : undefined,
+        gtmServerEvents,
+      };
+    })();
+</script>
+
+  
+
+  
+
+  <script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/tracking/gtm.7e0850.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/tracking/gtm.e36c5c.js"></script>
+
+ 
+
+  
+
+  
+
+  <script src="https://assets-v2.scaler.com/packs/js/frontend/tracking/navigation.57755b.js"></script>
+
+    <!-- Hotjar Tracking Code for https://www.scaler.com/academy/mentee-dashboard/to -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2240930,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+</head>
+<body>
+
+<script>
+  function closeNotification(event) {
+    var target = event.target || event.srcElement;
+    var notificationEl = target.closest('.sr-notification');
+    notificationEl && notificationEl.remove()
+  }
+</script>
+<div class="live-notifications" style="display: none;">
+  
+</div>
+
+<style type="text/css">
+  .live-notifications {
+    padding: 0px;
+    position: fixed;
+    z-index: 1000000;
+    bottom: 15px;
+    right: 15px;
+    width: 40%;
+  }
+</style>
+<div class="call-notifications" style="display: none">
+
+</div>
+
+<style type="text/css">
+  .call-notifications {
+    position: fixed;
+    z-index: 1000000;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    width: 40%;
+  }
+
+  @media (min-width: 360px) and (max-width: 767px) {
+    .call-notifications {
+      width: 89%;
+    }
+  }
+</style>
+
+
+
+
+
+<script>
+window.__MEETING_CONFIG__ = {
+  providers: {
+    agora: {
+      appId: '03d2d4319a52428ea2e5068d87f3bca9'
+    }
+  },
+  settings: JSON.parse('{"agora":{"video_broadcasting":{"screen_mode":"live","screen_profile":"720p_1","screen_attributes":{"medium":{"minBW":10,"maxBW":500}},"audio_profile":"speech_standard","dual_stream_enabled":false,"low_stream_params":{"bitrate":40,"framerate":10,"height":120,"width":160}}},"ab_testing":{"reaction":false},"general":{"floating_reactions":false}}'),
+  agora_recording_config : {"video_configuration":{"width":1280,"height":720,"fps":30,"bitrate":3000,"background_color":"#000000"},"idle_time":600,"channel_type":1,"webhook_enabled":true},
+  questionRateLimitTimeout: '180'
+}
+</script>
+<script>
+  window.__S3_CONFIG__ = {
+    bucket: "scaler-production-new",
+    region: "ap-southeast-1",
+  }
+</script>
+
+<div class="mentee-root" id="root" data="{&quot;main_app&quot;:true}">
+<div
+  data-variant-key="growth-tech_free-product_fp-rcb"
+  data-variant-value="default_rcb"
+>
+</div>
+
+<div
+  data-variant-key="growth_free-product_confirmation_modal"
+  data-variant-value="hide_fp_confirmation_modal"
+>
+</div>
+
+<div
+  data-variant-key="growth-tech_free-product_career_planning_tool"
+  data-variant-value="show_roadmap_output_page"
+>
+</div>
+
+<div
+  data-variant-key="growth_free-product_show_calendar_invite"
+  data-variant-value="fp_hide_calendar_invite"
+>
+</div>
+
+<div
+  data-variant-key="growth_free-product_show_live_class_nudge"
+  data-variant-value="fp_hide_live_nudge_class"
+>
+</div>
+
+<div
+  data-variant-key="growth_free-product_placement_banner_rcb"
+  data-variant-value="show_placement_banner_rcb"
+>
+</div>
+
+<div
+  data-variant-key="growth_free-product_placement_banner_exit-intent"
+  data-variant-value="show_placement_banner_exit_intent"
+>
+</div>
+
+<div
+  data-variant-key="referrals_free-product_self-apply-coupon"
+  data-variant-value="show_coupon_widget"
+>
+</div>
+<div
+  data-variant-key="growth-tech_free-product_curriculum_skill_section"
+  data-variant-value="show_skills_section"
+>
+</div>
+
+<div
+  data-variant-key="growth-tech_free-product_add_to_calendar"
+  data-variant-value="hide_add_to_calendar"
+>
+</div>
+
+<div
+  data-variant-key="growth-tech_free-product_scaler_benefit"
+  data-variant-value="hide_scaler_benefit"
+>
+</div>
+
+<div
+  data-variant-key="growth-tech_free-product_why_ai_banner"
+  data-variant-value="default_why_ai_banner"
+>
+</div>
+
+<div
+  data-variant-key="growth-tech_paid-product_referral_rcb_banner"
+  data-variant-value="show_banners_v2"
+>
+</div>
+
+<div
+  data-variant-key="growth-tech_paid-product_happy_flows_post_generator"
+  data-variant-value="show_happy_flows_post_generator"
+>
+</div>
+
+<div
+  data-variant-key="growth-tech_free-product_exit_intent"
+  data-variant-value="show_resume_discussion_exit_intent"
+>
+</div>
+
+<div
+  data-variant-key="growth-tech_free-product_voice_agent"
+  data-variant-value="hide_fp_voice_agent"
+>
+</div>
+
+<div
+  data-variant-key="growth-tech_paid-product_happy_flow_double_rewards_banner"
+  data-variant-value="hide_happy_flow_double_rewards_banner"
+>
+</div>
+
+<div
+  data-variant-key="growth-tech_free-product_cleanup"
+  data-variant-value="show_default_free_product"
+>
+</div>
+
+<div
+  data-variant-key="referrals-tech_friends-details-modal"
+  data-variant-value="hide_friends_details_modal"
+>
+</div>
+
+<div
+  data-variant-key="growth-tech_free-product_fp-onboarding-rcb"
+  data-variant-value="hide_onboarding_first_fold_rcb"
+>
+</div>
+</div>
+
+
+  <script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/acad~3afb9c87.d5e762.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/acad~22a1c824.28f628.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/acad~346f5942.fcca3e.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/acad~31762f92.09c736.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/base.f091bf.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/academy_admi~321287fc.ebe7f1.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/academy_land~9f08832a.08ffd9.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/base.4320de.js"></script>
+
+  <script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/acad~3e91e562.e0a6f8.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/acad~febe7012.946e60.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/acad~d8582b14.d20b84.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/acad~6a963c88.ed2c84.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/chat~38c1c41d.f66d15.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/ca~f~0ad8fab1.11205f.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/acad~6002ee17.b6a36a.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/acad~17525f25.c0f5c3.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/acad~f0902f75.0e1cfd.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~RichTextEdito~b32d7ae1.cef792.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/docs~7ecba091.b039fc.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/acad~db07ab73.380247.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~AgoraRTC_N-pr~e7b71988.515fd0.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~BarChart~Char~fac9964e.f3a191.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/alum~384d1308.45444f.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/alum~319156d0.0ac573.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/ment~e37f10a4.783871.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/hire~d67c2c23.38fa43.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/ment~c7022893.93d32b.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/crow~966f5cd6.3373a8.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/mentee~index.eccd73.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/crow~f54fa1af.1bb05e.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/ment~b225c074.9696b0.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/hire~22f8a4da.9f94c4.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/vendors~frontend/mentee.3e253d.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/academy_admi~2ef235c5.6d5978.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/academy_admi~52fd4632.de8e3a.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/chatbot~fron~034e6cde.a22feb.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/academy_admi~e275566d.71c4b4.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/docs~fronten~55f4a944.d0bf48.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/docs~fronten~3c7d0395.3f91ab.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/help_request~381d7144.4cb485.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/help_request~b073b57a.77c55e.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/help_request~c7133468.6a3799.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/events_admin~e5aeebdb.5f19a4.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/mentee~front~2de6db54.94e6eb.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/mentee~front~001f506e.e58d0f.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/mentee~front~6f586fc7.22221e.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/docs~fronten~60139a8c.dc47bb.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/crowd_evalua~72ec210e.77298c.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/hire_from_sc~c5007cf4.e6f82d.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/mentee~front~fdeb1a77.2b47d0.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/hire_from_sc~9c6d1a4a.ae7bec.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/crowd_evalua~3f4c4dea.5b7a01.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/mentee~index.f5245b.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/mentee~front~37662f88.613a56.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/hire_from_sc~7d089169.4ed182.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/mentee~front~7eabcdb1.05e938.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/mentee~frontend/store.884262.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/crowd_evalua~825adcac.3daed0.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/mentee~front~d387111b.4b394f.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/mentee~front~2ef5be81.372afe.chunk.js"></script>
+<script src="https://assets-v2.scaler.com/packs/js/frontend/mentee.7bc707.js"></script>
+
+  <div id="notebook-root"></div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      if(window.IBNotebook){
+        IBNotebook.widget('notebook-root');
+      }
+    });
+      window.isNewDashboard = true;
+  </script>
+    
+
+  
+
+  <script src="https://assets-v2.scaler.com/packs/js/frontend/notebook.e90e0c.js"></script>
+
+    <script>
+  // Use this method to dynamically update association
+  window.__NOTEBOOKS__ = {
+    updateAssociation: function(data) {
+      var dataEl = document.querySelector("[data-name='" + data.type + "-association']");
+      
+      if (!dataEl) {
+        dataEl = document.createElement('div');
+        dataEl.setAttribute('data-name', data.type + "-association");
+        document.body.appendChild(dataEl);
+      }
+
+      dataEl.setAttribute('data-associate-type', data.associateType);
+      dataEl.setAttribute('data-associate-id', data.associateId);
+      dataEl.setAttribute('data-label', data.label);
+    },
+
+    clearAssociation: function(type) {
+      var dataEl = document.querySelector("[data-name='" + type + "-association']");
+      if (dataEl) dataEl.remove();
+    }
+  }
+</script>
+
+
+<!--
+If this partial is used make sure that your controller has `Twilio::ChatHelper`
+included in it or one of its parent controller. Also for the action which
+renders this partial add configure `load_twilio_chat` as before_action
+-->
+
+
+<div id="notification-root" data="{&quot;userId&quot;:7504781}">
+</div>  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      if(window.IBNotification){
+        IBNotification.widget('notification-root');
+      }
+    });
+  </script>
+  
+
+  
+
+  <script src="https://assets-v2.scaler.com/packs/js/frontend/notification.07a20d.js"></script>
+
+  <script>
+  // Use this method to dynamically update association
+  window.__NOTEBOOKS__ = {
+    updateAssociation: function(data) {
+      var dataEl = document.querySelector("[data-name='" + data.type + "-association']");
+      
+      if (!dataEl) {
+        dataEl = document.createElement('div');
+        dataEl.setAttribute('data-name', data.type + "-association");
+        document.body.appendChild(dataEl);
+      }
+
+      dataEl.setAttribute('data-associate-type', data.associateType);
+      dataEl.setAttribute('data-associate-id', data.associateId);
+      dataEl.setAttribute('data-label', data.label);
+    },
+
+    clearAssociation: function(type) {
+      var dataEl = document.querySelector("[data-name='" + type + "-association']");
+      if (dataEl) dataEl.remove();
+    }
+  }
+</script>
+
+<div class="call-notifications" style="display: none">
+
+</div>
+
+<style type="text/css">
+  .call-notifications {
+    position: fixed;
+    z-index: 1000000;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    width: 40%;
+  }
+
+  @media (min-width: 360px) and (max-width: 767px) {
+    .call-notifications {
+      width: 89%;
+    }
+  }
+</style>
+<!-- Microsoft Clarity Tracking -->
+  <script>
+    function loadClarity() {
+      window.removeEventListener('mousemove', loadClarity);
+      window.removeEventListener('click', loadClarity);
+      window.removeEventListener('scroll', loadClarity);
+      window.removeEventListener('touchstart', loadClarity);
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.defer=1;t.src='https://www.clarity.ms/tag/'+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, 'clarity', 'script', '88p2ra3tiy');
+    }
+    window.addEventListener('mousemove', loadClarity);
+    window.addEventListener('click', loadClarity);
+    window.addEventListener('scroll', loadClarity);
+    window.addEventListener('touchstart', loadClarity);
+  </script>
+
+<script src="https://assets-v2.scaler.com/assets/web/call_notifications-8fb5e4019e9e702ecf7e0b661961026cebaf7737ca9e3335abd19346b010a2ea.js.gz"></script>
+<!-- Widget Start-->
+<!-- Widget End    -->
+
+
+<script type='text/javascript'>
+  function setTicketWidgetProperties(){
+    if(window.FreshworksWidget){
+      window.FreshworksWidget('hide', 'launcher');
+      window.FreshworksWidget('identify', 'ticketForm', {
+        name: "NIKHIL Mandloi ",
+        email: "nikhil.25bcs10100@sst.scaler.com",
+      });
+    }
+  }
+</script>
+<script>
+	window.fwSettings={
+	'widget_id':82000005336
+	};
+	!function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}() 
+</script>
+<script onload="setTicketWidgetProperties()" type='text/javascript' src='https://ind-widget.freshworks.com/widgets/82000005336.js' async defer></script>
+
+
+<script>
+  window.__INITIAL_STATE__ = {
+    sitekey: "6LcMX6kkAAAAAKDi-bnADV5-Lgjhxncdj8n3R71m"
+  }
+  window.__AUTH_TOKEN__ = `eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo3NTA0NzgxLCJleHAiOjE3NjY5MDk3NDd9.XhJfdTvehleQhXuiu15M3FORfgrXt8dezXViO1m5tC8`;
+  window.__FLRC__ = `false`;
+  window.__CONTEXTUAL_RCB__ = `false`;
+  window.__SHOW_CAREER_PLANNING_TOOL__ = `false`
+  window.__SHOW_FP_CONFIRMATION_MODAL__ = "false";
+  window.__SHOW_SPEAKER_INTRO_VIDEOS__ = `false`;
+  window.__SHOW_UPCOMING_EVENT__ = `fp_hide_calendar_invite`
+  window.__JOIN_LIVE_CLASS_NUDGE__ = `fp_hide_live_nudge_class`
+  window.__PLACEMENT_BANNER_RCB_VARIANT__ =  `show_placement_banner_rcb`
+  window.__PLACEMENT_BANNER_EXIT_INTENT_VARIANT__ =  `show_placement_banner_exit_intent`
+  window.__REFERRAL_SELF_APPLY_COUPON_VARIANT__ = `show_coupon_widget`
+  window.__CURRICULUM_SKILLS_SECTION__ = `show_skills_section`
+  window.__ADD_TO_CALENDAR_VARIANT__ = `hide_add_to_calendar`
+  window.__SCALER_BENEFIT__VARIANT = `hide_scaler_benefit`
+  window.__WHY_AI_BANNER_VARIANT__ = `default_why_ai_banner`
+  window.__PRE_RECORDED_COURSE__ = `false`
+  window.__REFERRAL_RCB_BANNER_VARIANT__ = `show_banners_v2`
+  window.__HAPPY_FLOWS_POST_GENERATOR_VARIANT__ = `show_happy_flows_post_generator`
+  window.__FP_EXIT_INTENT_VARIANT__ = `show_resume_discussion_exit_intent`
+  window.__AI_VOICE_AGENT_ID__ = `agent_7501k2fsbqg6e4tbpdmmjyj1deqp`
+  window.__FP_VOICE_AGENT_VARIANT__ = `hide_fp_voice_agent`
+  window.__HAPPY_FLOW_DOUBLE_REWARDS_BANNER_VARIANT__ = `hide_happy_flow_double_rewards_banner`
+  window.__FP_CLEANUP_VARIANT__ = `show_default_free_product`
+  window.__REFERRALS_FRIENDS_DETAILS_MODAL_VARIANT__ = "hide_friends_details_modal"
+  window.__FP_ONBOARDING_RCB_VARIANT__ = `hide_onboarding_first_fold_rcb`
+</script>
+
+
+  
+
+  
+
+  <script src="https://assets-v2.scaler.com/packs/js/frontend/profile_common.bf1dfc.js"></script>
+  
+
+  
+  
+
+  <script src="https://assets-v2.scaler.com/packs/js/frontend/rich_text_editor.9585fa.js"></script>
+  
+
+  <script src="https://assets-v2.scaler.com/packs/js/frontend/streak.774f90.js"></script>
+
+
+
+<script src="https://assets-v2.scaler.com/assets/web/call_notifications-8fb5e4019e9e702ecf7e0b661961026cebaf7737ca9e3335abd19346b010a2ea.js.gz"></script>
+<script src="https://assets-v2.scaler.com/assets/utils-2a1a9f461801b7fd5303c0aa99839ae63e105a7a1891333e0ec903aebb7db632.js.gz"></script>
+<script src="https://assets-v2.scaler.com/assets/web/academy/shared/event_tracker-d821cadbe297e3dbc9422de2a32e1bfadf7332a0ee179b7f7efd6ab02d0c5acc.js.gz"></script>
+
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M94JJN9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+<script>
+    var gaSendMethod = 'gtm1.send';
+
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    // added so that the files that are common on both ib and scaler can handle their respective ga calls
+    window.trackGaEvent = function(...args) {
+        const gaArgs = [gaSendMethod, 'event', ...args];
+        window.ga(...gaArgs);
+        // This is a temporary workaround
+        if (gaArgs[1] !== 'exception' && typeof storeEsEvent !== 'undefined') {
+            let eventTitle = "";
+            for (let i = 2; i < gaArgs.length; i++) {
+                if (i != 2)
+                    eventTitle = eventTitle + "-";
+                eventTitle = eventTitle + gaArgs[i];
+            }
+            storeEsEvent(eventTitle);
+        }
+    }
+</script>
+
+<script>
+// Set user context at global level
+    window.__CURRENT__USER__ = {
+      email: 'nikhil.25bcs10100@sst.scaler.com'
+    }
+</script>
+
+</body>
+</html>
